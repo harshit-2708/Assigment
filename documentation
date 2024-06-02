@@ -1,0 +1,14 @@
+### Problem 1: Reducing Latency
+
+To reduce latency, two steps were taken:
+1. **Create Indexes**: Indexes were created on the `name` and `id` columns in the `tours` table.
+2. **Cursor-Based Pagination**: Cursor-based pagination was implemented with a default page size of 10 and an initial ID of 0. When an ID is provided, it fetches the page with matches greater than the given match ID.
+
+### Problem 2: Fetching Additional Columns
+To enhance the match information, three additional columns were fetched as mentioned in the instructions. A new object was created to encapsulate this enriched match information.
+
+### Problem 3: News Schema and Scalability
+**News Schema**:
+- **Columns**: `title`, `description`, `matchId`, `tourId`, `createdDate`, `modifiedDate`.
+- **Foreign Key Constraint**: Applied only on `tourId` since `matchId` inherently belongs to `tourId`.
+- **Scalability**: Could add a `sportId` column to support the feature of news belonging to a particular sport.
