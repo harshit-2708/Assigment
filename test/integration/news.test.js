@@ -1,12 +1,13 @@
 const assert = require('chai').assert;
 const request = require('supertest');
-const app = require("../../index");
+const { app } = require('../../index');
 
 describe('News API tests', () => {
     let server;
 
     beforeAll((done) => {
         server = app.listen(done);
+        console.log(server.address);
     });
 
     afterAll((done) => {

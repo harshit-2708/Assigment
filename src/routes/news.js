@@ -18,7 +18,7 @@ module.exports = function (app) {
         try {
             const id = parseInt(req.params.id, 10);
             const news = await News.getMatchNews(id);
-            res.status(202).json(news);
+            res.status(200).json(news);
         } catch (error) {
             res.status(500).send(error.message);
         }
@@ -28,7 +28,7 @@ module.exports = function (app) {
         try {
             const id = parseInt(req.params.id, 10);
             const news = await News.getTourNews(id);
-            res.status(202).json(news);
+            res.status(200).json(news);
         } catch (error) {
             res.status(500).send(error.message);
         }
@@ -38,7 +38,7 @@ module.exports = function (app) {
         try {
             const id = parseInt(req.params.id, 10);
             const news = await News.getSportNews(id);
-            res.status(202).json(news);
+            res.status(200).json(news);
         } catch (error) {
             res.status(500).send(error.message);
         }
